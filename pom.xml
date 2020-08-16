@@ -50,7 +50,41 @@
             <classifier>mule-plugin</classifier>
         </dependency>
 	</dependencies>
-
+	<profiles>
+<profile>
+  <id>cloudhub</id>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.mule.tools.maven</groupId>
+        <artifactId>mule-maven-plugin</artifactId>
+        <configuration>
+          <deploymentType>cloudhub</deploymentType>
+          <muleVersion>${mule.version}</muleVersion> 
+          <username>${anypoint.username}</username> 
+          <password>${anypoint.password}</password> 
+          <applicationName>${artifactId}</applicationName>
+          <environment>${cloundhub.env}</environment> 
+          <businessGroup>${anypoint.businessGroup}</businessGroup>
+          <region>${cloudhub.region}</region>
+          <uri>${anypoint.uri}</uri> 
+          <workerType>${cloudhub.workerType}</workerType>
+          <workers>${cloudhub.workers}</workers>
+        </configuration>
+        <executions>
+          <execution>
+            <id>deploy</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>deploy</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</profile>
+		</profiles>
 	<repositories>
           <repository>
             <id>anypoint-exchange-v2</id>
