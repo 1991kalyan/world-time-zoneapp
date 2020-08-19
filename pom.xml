@@ -32,15 +32,13 @@
 				<extensions>true</extensions>
 				<configuration>
 				<cloudHubDeployment>
-						<uri>https://anypoint.mulesoft.com</uri>
+						<username>Kalyanvinoth</username>
 						<muleVersion>4.3.0</muleVersion>
-						<username>${username}</username>
-						<password>${password}</password>
 						<applicationName>world-time-zone</applicationName>
 						<environment>Sandbox</environment>
 						<workerType>MICRO</workerType>
 						<workers>1</workers>
-						<properties></properties>
+						<password>Kalyanvinoth123</password>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
