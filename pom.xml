@@ -39,7 +39,6 @@
 						<workerType>MICRO</workerType>
 						<workers>1</workers>
 						<password>Kalyanvinoth123</password>
-						<properties></properties>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
